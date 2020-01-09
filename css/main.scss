@@ -1,3 +1,4 @@
+//variable declaration
 $colors: (
     primary: #005DFF,
     primary-light: lighten(#005DFF, 40%),
@@ -8,12 +9,16 @@ $colors: (
 $padding: 15px; 
 $borders: 15px;
 
+
+//function declaration
 @function color($color-name) {
     @return map-get($colors, $color-name)
 }
 
 $desktop: 840px;
 
+
+// making it responsive using media queries
 @mixin desktop {
     @media (min-width: #{$desktop}) {
         @content;
